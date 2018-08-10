@@ -1,20 +1,24 @@
-# Memory Game Project
+# Memory Game 
+* Your goal is to Match your cards in less time and least number of moves.
 
-## Table of Contents
+## Instructions:
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+* Click on any card.
+* Keep unfolding cards and working on your memory to remember each card you opened.
+* Match cards properly with fewer moves and in lesser time. Remember, you receive more star ratings if you finish the game in less moves and less time.
 
-## Instructions
+## I Used:
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+----
+* HTML 
+* Javascript
+* Css
 
-To get started, open `js/app.js` and start building out the app's functionality
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+** Game Functionalities: **
 
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+* When you start to play it captures the number of moves to match all the cards.
+* Counts the time required to complete the game in minutes and seconds
+* Once the game is finished, modal displays star rating on the basis of time and moves with a Congratulations message.
+* Modal has play again option.
+* User can restart the game at any point of time using the reload icon on top of the screen.

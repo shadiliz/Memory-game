@@ -79,11 +79,14 @@ h1 {
     cursor: default;
     background: #02ccba;
     font-size: 33px;
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
 }
 
-/*
- * Styles for the Score Panel
- */
+.deck .card.disabled {
+	pointer-events: none;	
+}
+
+/* Styles for the Score Panel*/
 
 .score-panel {
     text-align: left;
@@ -106,4 +109,209 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+/** modal style */
+.modal {
+  top: -150%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(168, 154, 154, 0.9);
+  z-index: 99;
+  transition: all 300ms ease;
+}
+  .modal .inner {
+    width: 50%;
+    margin: 10% auto;
+    padding: 2em;
+    text-align: center;
+    background: #ffffff; /* changed the background to background-color*/
+    box-shadow: 0px 0px 4px 1px #a8a7a5;
+}
+    .modal .inner h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em; }
+    .modal .inner p {
+    font-size: 1.4em;
+    margin-bottom: 0.5em; 
+}
+    .modal .inner button {
+    margin-top: 1.5em;
+    padding: 0.5em 3em;
+    font-size: 1.1em;
+    border: 0;
+    background: #9f9797;
+    box-shadow: 1px 1px 5px 0px #ccc;
+    cursor: pointer;
+    transition: all 300ms ease; 
+}
+    .modal .inner button:hover {
+    box-shadow: none; 
+}
+/* Shake animation guess from https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ just for match card I've added shake affect */
+
+@keyframes shake {
+    10%, 90% {
+    transform: translate3d(-2px, 0, 0);
+    }
+
+    20%, 80% {
+    transform: translate3d(4px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+    transform: translate3d(-6px, 0, 0);
+    }
+
+    40%, 60% {
+    transform: translate3d(6px, 0, 0);
+    }
+}
+
+/* Responsive */
+
+@media all and (min-width: 400px) and (max-width: 700px) { 
+
+h1 {
+	text-align: center;	
+}
+.score-panel {
+	text-align: center;
+}
+	
+.container {
+    margin: 30px;
+}
+	
+.deck {	
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding-left: 40px;
+    width: 90%;	
+}
+	
+.deck .card {
+    height: 80px;
+    width: 60px;
+	border-radius: 15px;
+	text-align: center;
+	margin: 4px;
+	padding: 20px;
+}
+	
+.modal {
+	width: 100%;
+    height: 140%;
+	padding: 70px;	
+}
+	
+.modal .inner h2 {
+    font-size: 1.3em;
+}
+	
+.modal .inner {
+    width: 80%;
+    margin: 5% auto;
+    padding: 3em;
+}
+	
+.modal .inner p {
+    font-size: 1.5em;
+    margin-bottom: 1.9em;
+}
+.modal .inner button {
+    font-size: 1em;
+	margin-left: 2px;	
+}
+	
+}
+
+@media all and (min-width: 320px) and (max-width: 568px) {
+h1 {
+	text-align: center;	
+}
+	
+.score-panel {
+    text-align: center;
+}
+ 
+.container {
+    display: flex;
+    justify-content: center;
+	margin-left: 62px;
+	padding-right: 20px;
+}
+ 
+.deck {	
+    min-height: 40px; 
+    width: 120%;
+	height: 400px;	
+}
+
+.deck .card {
+    height: 70px;
+    width: 50px;
+	border-radius: 10px;
+	text-align: center;
+}
+ 
+.modal .inner h2 {
+    font-size: 1em;
+}
+
+.modal {
+ 	width: 120%;
+    height: 100%;
+}
+ 
+.modal .inner {
+    width: 70%;
+    margin: 6% auto;
+    padding: 1em;
+    text-align: center;
+}
+ 
+.modal .inner p {
+    font-size: 1.3em;
+    margin-bottom: 0.9em;
+}
+ 
+.modal .inner button {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+.score-panel .restart {
+    text-align: center;	
+   margin-right: 70px;
+}
+	
+}
+
+@media all and (min-width: 360px) and (max-width: 640px) {
+.container {
+    margin: 40px;
+	padding: 5px;	
+}
+	
+.deck {	
+    width: 110%;
+	padding: 30px;	
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+}
+	
+}
+
+@media all and (min-width: 411px) and (max-width: 731px) {
+.container {
+    margin: 73px;
+	padding: 5px;	
+}
+	
 }
