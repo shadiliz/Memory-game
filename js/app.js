@@ -217,6 +217,7 @@ restartBtn.addEventListener("click", function() {
 function reset() {
     /* take out matched card array */
     matchedCards = [];
+    openedCards = [];
     /* reset moves */
     moves = 0;
     movesContainer.innerHTML = moves;
